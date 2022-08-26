@@ -1,11 +1,11 @@
 FROM python:3.10-alpine
 #Run apt update
 #Run apt upgrade -y
-RUN command apt update && \
+RUN apt update && \
     apt install -y \
     git \
     pytest \
-    && rm -rf/var
+    && rm -rf/var 
 
 EXPOSE 5000
 
