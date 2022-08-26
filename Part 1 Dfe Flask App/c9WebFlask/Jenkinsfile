@@ -9,14 +9,19 @@ pipeline{
     agent any   
         stages {
         
-
-           stage ('Build Docker Image'){
-                steps{
-                    script {
-                        dockerImage = docker.build(registry,"./Part 1 Dfe Flask App/c9WebFlask")
+stage('docker build') {
+            steps {
+                dir('./Part 1 Dfe Flask App/c9WebFlask'){
+                    script{
+                        dockerImage = docker.build(registry)
                     }
                 }
             }
+        }
+           
+    
+                
+            
 
             stage ("Push to Docker Hub"){
                 steps {
