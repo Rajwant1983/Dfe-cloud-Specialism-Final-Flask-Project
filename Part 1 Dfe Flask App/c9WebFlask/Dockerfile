@@ -3,8 +3,8 @@ FROM python:3.10-alpine
 #Run apt upgrade -y
 RUN command apt update && \
     apt install -y \
-    git\
-    pytest\
+    git \
+    pytest \
     && rm -rf/var
 
 EXPOSE 5000
