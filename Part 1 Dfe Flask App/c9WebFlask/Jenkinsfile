@@ -51,7 +51,7 @@ stage('docker build') {
     
     post {
         always {
-            junit "*.xml"
+            junit '**/test-reports/*.xml'
         }
     }   
 }
