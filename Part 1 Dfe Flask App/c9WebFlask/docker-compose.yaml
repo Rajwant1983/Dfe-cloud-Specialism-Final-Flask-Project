@@ -1,8 +1,8 @@
-version: '3.10'
+version: '3.7'
 
 services:
   web:
-    image: "rajwantkaur/webflask"
+    image: rajwantkaur/webflask
     environment:
       - db_connection=mysql+pymysql://flask:flask@db:3306/demoflask
       - PYTHONUNBUFFERED=1
