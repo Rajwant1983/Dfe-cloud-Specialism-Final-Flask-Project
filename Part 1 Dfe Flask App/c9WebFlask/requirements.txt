@@ -6,3 +6,4 @@ wtforms
 pymysql
 pytest
 cryptography
+selenium
