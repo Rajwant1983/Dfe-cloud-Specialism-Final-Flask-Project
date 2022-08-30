@@ -8,8 +8,14 @@ pipeline{
 
     agent any   
         stages {
+            stage('Testing'){
+                steps{
+                    sh 'pip install -r requirements.txt'
+                    sh 'pytest-3 --junitxml results.xml'
+                }
+            }
         
-stage('docker build') {
+stage('docker build Images') {
             steps {
                 dir('./Part 1 Dfe Flask App/c9WebFlask'){
                     script{
@@ -18,12 +24,7 @@ stage('docker build') {
                 }
             }
         }
-           
-    
-                
-            
-
-            stage ("Push to Docker Hub"){
+         stage ("Push to Docker Hub"){
                 steps {
                     script {
                         docker.withRegistry('', registryCredentials) {
