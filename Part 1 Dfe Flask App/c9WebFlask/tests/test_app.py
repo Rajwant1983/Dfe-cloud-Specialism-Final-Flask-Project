@@ -1,3 +1,4 @@
+from cgi import test
 from typing_extensions import Self
 from unicodedata import name
 from flask_testing import LiveServerTestCase
@@ -19,3 +20,8 @@ def musicDBConnection():
         TESTING=True
     )
     return app
+def setUp(self):
+    from app import c7Music
+    musicDBConnection.app() 
+
+   
