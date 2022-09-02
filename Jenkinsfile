@@ -11,7 +11,7 @@ pipeline{
             stage('Testing'){
                 steps{
                     sh 'pip install -r requirements.txt'
-                    sh 'cd Part\ 1\ Dfe\ Flask\ App/'
+                    sh 'cd finalproject'
                     sh 'cd c9WebFlask/'
                     sh 'python -m pytest'
                 }
@@ -19,7 +19,7 @@ pipeline{
         
 stage('docker build Images') {
             steps {
-                dir('./Part 1 Dfe Flask App/c9WebFlask'){
+                dir('./finalproject/c9WebFlask'){
                     script{
                         dockerImage = docker.build(registry)
                     }
