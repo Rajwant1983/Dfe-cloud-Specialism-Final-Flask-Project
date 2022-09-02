@@ -18,7 +18,7 @@ pipeline{
         
 stage('docker build Images') {
             steps {
-                dir('./Part 1 Dfe Flask App/c9WebFlask'){
+                dir('./finalproject/c9WebFlask'){
                     script{
                         dockerImage = docker.build(registry)
                     }
