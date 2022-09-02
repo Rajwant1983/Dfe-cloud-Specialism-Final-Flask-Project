@@ -1,6 +1,0 @@
-# created by virtualenv automatically
-**/__pycache__/
-**/venv/
-*.db
-.coverage
-Part 2 DB Operations/SQLite
