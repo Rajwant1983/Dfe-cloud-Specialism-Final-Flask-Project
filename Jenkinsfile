@@ -10,8 +10,8 @@ pipeline{
         stages {
             stage('Testing'){
                 steps{
-                    sh 'pip3 install -r requirements.txt'
                     sh 'cd finalproject'
+                    sh 'pip3 install -r requirements.txt'
                     sh 'cd c9WebFlask/'
                     sh 'python -m pytest'
                 }
