@@ -7,7 +7,7 @@ app = Flask(__name__) # main class
 # create afunction to handle musicdb connection 
 def musicDBConnection():
      #conn variable = sql.connectMethod(path/filename)
-    conn = sql.connect('Part 1 Dfe Flask App/c7Music.db')
+    conn = sql.connect('finalproject/c7Music.db')
     # row.factory syntax is used access/manipulate the database
     conn.row_factory = sql.Row
     return conn
@@ -25,7 +25,7 @@ def index():
 @app.route('/songs') # set the route for the songs.html
 def songs():
     #conn variable = sql.connectMethod(path/filename)
-    conn = sql.connect('Part 1 Dfe Flask App/c7Music.db')
+    conn = sql.connect('finalproject/c7Music.db')
     # row.factory syntax is used access/manipulate the database
     conn.row_factory = sql.Row
 
@@ -112,3 +112,4 @@ def delete(songID):
 #invoke/call the main class 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port = 8100)
+    
