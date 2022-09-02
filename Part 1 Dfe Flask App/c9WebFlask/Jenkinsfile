@@ -14,7 +14,6 @@ pipeline{
                     sh 'cd Part\ 1\ Dfe\ Flask\ App/'
                     sh 'cd c9WebFlask/'
                     sh 'python -m pytest'
-                    sh 'cd ../../'
                 }
             }
         
