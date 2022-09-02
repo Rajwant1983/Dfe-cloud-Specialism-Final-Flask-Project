@@ -1,5 +1,4 @@
 from cgi import test
-from typing_extensions import Self
 from unicodedata import name
 from flask_testing import LiveServerTestCase
 from urllib.request import urlopen

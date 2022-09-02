@@ -11,7 +11,10 @@ pipeline{
             stage('Testing'){
                 steps{
                     sh 'pip install -r requirements.txt'
-                    sh 'pytest-3 --junitxml results.xml'
+                    sh 'cd Part\ 1\ Dfe\ Flask\ App/'
+                    sh 'cd c9WebFlask/'
+                    sh 'python -m pytest'
+                    sh 'cd ../../'
                 }
             }
         
