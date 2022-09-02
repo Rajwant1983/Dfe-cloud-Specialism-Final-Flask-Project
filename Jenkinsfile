@@ -12,7 +12,7 @@ pipeline{
                 steps{
                     sh 'pip install -r requirements.txt'
                     sh 'cd finalproject'
-                    sh 'cd c9WebFlask/'
+                    sh 'cd c9WebFlask'
                     sh 'python -m pytest'
                 }
             }
