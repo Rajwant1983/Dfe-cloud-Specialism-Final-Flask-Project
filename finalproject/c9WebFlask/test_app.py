@@ -13,7 +13,7 @@ class TestBase(LiveServerTestCase):
 def musicDBConnection():  
     app.config.update(
         SQLALCHEMY_DATABASE_URI="sqlite:///",
-        #LIVESERVER_PORT=Self.TEST_PORT,            
+        LIVESERVER_PORT=Self.TEST_PORT,            
         DEBUG=True,
         TESTING=True
     )
