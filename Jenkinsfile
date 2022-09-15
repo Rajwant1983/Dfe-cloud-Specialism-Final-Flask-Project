@@ -58,3 +58,4 @@ stage('docker build Images') {
          junit "*.xml"
         }
     }   
+}
