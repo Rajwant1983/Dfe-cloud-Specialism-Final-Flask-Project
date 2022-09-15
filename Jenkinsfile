@@ -17,7 +17,7 @@ pipeline{
                 }
             }
         
-        }
+        
 stage('docker build Images') {
             steps {
                 dir('./finalproject/c9WebFlask'){
@@ -58,3 +58,4 @@ stage('docker build Images') {
          junit "*.xml"
         }
     }   
+}
