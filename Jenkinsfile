@@ -16,7 +16,7 @@ pipeline{
                     sh 'cd ../../'
                 }
             }
-        }
+        
         
 stage('docker build Images') {
             steps {
