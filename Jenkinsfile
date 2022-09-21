@@ -17,8 +17,7 @@ pipeline{
                 }
             }
         
-        
-stage('docker build Images') {
+        stage('docker build Images') {
             steps {
                 dir('./finalproject/c9WebFlask'){
                     script{
