@@ -5,7 +5,16 @@ pipeline{
         dockerImage = ""
         HOME = "${env.WORKSPACE}"
     }
-
+    agent any   
+        stages {
+            stage('Testing'){
+                steps{
+                    sh 'pip install -r requirements.txt'
+                    sh 'cd finalproject/c9WebFlask'
+                    sh 'python3 -m pytest'
+                    sh 'cd ../../'
+                }
+            }
     
         
         stage('docker build Images') {
