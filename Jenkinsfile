@@ -48,4 +48,3 @@ pipeline{
          junit "*.xml"
         }
     }   
-}
